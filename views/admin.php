@@ -91,6 +91,29 @@
 				</tr>
 				<tr valign="top">
 					<th scope="row">
+						<label for="post_by_email_options[default_email_post_type]">
+							<?php _e( 'Default Mail Post Type', 'post-by-email' ); ?>
+						</label>
+					</th>
+					<td>
+						<select id="post_by_email_options[default_email_post_type]" name="post_by_email_options[default_email_post_type]" class="postform">
+							<option value="post" <?php selected( 'post', $options['default_email_post_type'] ); ?>>Post</option>
+
+							<?php
+							$custom_post_types = get_post_types( array( '_builtin' => false, 'public' => true ) );
+							
+							if ( $custom_post_types ) {
+								foreach ( $custom_post_types as $post_type ) {
+									$post_type_object = get_post_type_object( $post_type );
+									echo '<option value="' . $post_type . '" ' . selected( $post_type, $options["default_email_post_type"] ) . '>' . $post_type_object->labels->singular_name . '</option>';
+								}
+							}
+							?>
+						</select>
+					</td>
+				</tr>
+				<tr valign="top">
+					<th scope="row">
 						<label for="post_by_email_options[default_email_category]">
 							<?php _e( 'Default Mail Category', 'post-by-email' ); ?>
 						</label>

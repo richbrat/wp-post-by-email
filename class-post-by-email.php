@@ -354,6 +354,8 @@ class Post_By_Email {
 				}
 			}
 
+			// post type
+			$post_type = $options['default_email_post_type'];
 
 			/* shortcode: categories. [category cat1 cat2...] */
 

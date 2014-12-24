@@ -2,18 +2,18 @@
 /**
  * Post By Email Plugin
  *
- * @package   PostByEmail
- * @author    Kat Hagan <kat@codebykat.com>
+ * @package   PostByEmailAlbumsFork
+ * @author    Kat Hagan <kat@codebykat.com>, forked by Richard Brattlund <info@richardbrattlund.se>
  * @license   GPL-2.0+
- * @link      http://codebykat.wordpress.com
- * @copyright 2013 Kat Hagan
+ * @link      http://codebykat.wordpress.com / http://richardbrattlund.se
+ * @copyright 2014 Kat Hagan / Richard Brattlund
  *
  * @wordpress-plugin
- * Plugin Name: Post By Email
- * Plugin URI:  http://codebykat.wordpress.com
+ * Plugin Name: Post By Email Albums Fork
+ * Plugin URI:  http://richardbrattlund.se
  * Description: Create new posts on your WordPress blog by sending email to a specific email address.
  * Version:     1.0.4b
- * Author:      Kat Hagan
+ * Author:      Kat Hagan, forked by Richard Brattlund
  * Author URI:  http://profiles.wordpress.org/codebykat
  * Text Domain: post-by-email
  * License:     GPL-2.0+
@@ -21,7 +21,7 @@
  * Domain Path: /lang
  */
 
-/*  Copyright 2013  Kat Hagan  (email : kat@codebykat.com)
+/*  Copyright 2014  Kat Hagan  (email : kat@codebykat.com)
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License, version 2, as 

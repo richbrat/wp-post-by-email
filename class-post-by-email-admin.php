@@ -151,6 +151,18 @@ class Post_By_Email_Admin {
 			);
 		}
 
+		// default email post type must be the name of a real post type
+		$default_email_post_type = $input['default_email_post_type'];
+		if ( get_post_type_object( $default_email_post_type ) ) {
+			$options['default_email_post_type'] = $default_email_post_type;
+		} else {
+			$error_message = __( 'Could not save default post type: post type not found.', 'post-by-email' );
+			add_settings_error( 'post_by_email_options',
+				'post_by_email_options[default_email_post_type]',
+				$error_message
+			);
+		}
+
 		$options['ssl'] = isset( $input['ssl'] ) && '' != $input['ssl'];
 		$options['delete_messages'] = isset( $input['delete_messages'] ) && '' != $input['delete_messages'];
 
